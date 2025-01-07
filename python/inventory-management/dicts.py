@@ -12,7 +12,7 @@ def create_inventory(items):
     
     for item in items:
         
-        if item in inventory.keys():
+        if item in inventory:
             inventory[item] += 1
             
         else:
@@ -50,7 +50,7 @@ def decrement_items(inventory, items):
 
     for item in items:
         
-        if inventory[item] > 0:
+        if item in inventory.keys() and inventory[item] > 0:
             inventory[item] -= 1
             
     return inventory
@@ -83,4 +83,3 @@ def list_inventory(inventory):
             report.append((key, inventory[key]))
             
     return report
-
