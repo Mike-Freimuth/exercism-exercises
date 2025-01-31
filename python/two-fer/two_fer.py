@@ -1,4 +1,3 @@
-def two_fer(name):
+def two_fer(name='you'):
     
-    if name == None:
-        return ''
+    return 'One for {}, one for me.'.format(name)
