@@ -1,2 +1,10 @@
 def square_root(number):
-    pass
+    
+    x = number 
+    
+    while True:
+        
+        if x*x == number:
+            return x
+        
+        x = (x + (number/x)) // 2
